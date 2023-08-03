@@ -77,8 +77,63 @@ var array = [10, 20, 30, 50, 10, 80, 20];
 array.splice(3, 0, 100, 200, 300, 600)
 console.log(array);
 
+
 var array = [10, 20, 30, 50, 10, 80, 20];
-
-
 array.splice(4, 2, 33, 55, 66, 77 );
 console.log(array);
+
+console.log(`------ concat ----------`);
+let array1 = [3, 4, 5, 6];
+let array2 = [6, 7, 8, 9];
+let array3 = array1.concat(array2);
+console.log(array3);
+
+console.log(`------ join ----------`);
+let result = array1.join(",");
+console.log(result);
+
+console.log(`------ for of loop ----------`);
+for (const element of array3) {
+    console.log(element);
+}
+
+let mySet = new Set();
+mySet.add(2);
+mySet.add(4);
+mySet.add(6);
+mySet.add(7);
+console.log(mySet);
+
+mySet.add(4);
+console.log(mySet);
+
+let isAvailable = mySet.has(6)
+console.log(isAvailable);
+
+let is9Available = mySet.has(9)
+console.log(is9Available);
+
+console.log(`Set size is ${mySet.size}`);
+
+mySet.delete(4);
+console.log(mySet);
+
+// mySet.clear();
+for (const element of mySet) {
+    console.log(element);
+}
+
+let array = [4, 5, 4, 5, 8, 5];
+let setOfNumbers = new Set();
+for (const value of array) {
+    setOfNumbers.add(value);
+}
+console.log(array);
+console.log(setOfNumbers);
+
+console.log(`Removing duplicate elements from array using spread operator`);
+let arrayNew = [4, 5, 4, 5, 8, 5, 7, 8, 9, 7, 8];
+arrayNew = [...new Set(arrayNew)];
+console.log(arrayNew);
+// console.log(newSet);
+
